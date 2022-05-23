@@ -11,6 +11,7 @@ Your task is to fix existing specs (without changing existing), add new specs if
 4. Make sure 'bundle exec rubocop' return no offenses.
 
 Do not hesitate to ask questions if something is not clear.
+
 Read about rswag if you don't already familiar with it.
 
-Submission: Fork to a new public repo and create a pull request in that new repo and send us the link.
+How to submit: Fork to a new public repo and create a pull request in that new repo and send us the link.
