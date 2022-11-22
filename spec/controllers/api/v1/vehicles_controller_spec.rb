@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Api::V1::VehiclesController, type: :controller do
+RSpec.describe Api::V1::VehiclesController do
   before do
     request.headers['Content-Type']  = 'application/json'
     request.headers['Authorization'] = send('Authorization')

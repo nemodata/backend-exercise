@@ -31,8 +31,6 @@ Layout/HashAlignment:
   EnforcedHashRocketStyle: table
   EnforcedColonStyle:      table
 
-Gemspec/DateAssignment: # (new in 1.10)
-  Enabled: true
 Layout/SpaceBeforeBrackets: # (new in 1.7)
   Enabled: true
 Lint/AmbiguousAssignment: # (new in 1.7)
@@ -102,6 +100,8 @@ RSpec/AnyInstance:
 RSpec/DescribeClass:
   Exclude:
     - 'spec/tasks/**/*_spec.rb'
+    - 'spec/requests/api/v1/**/*.rb'
+    - 'spec/routing/**/*.rb'
 
 # NOTE the cops below are too restrictive for specs code...
 # NOTE plus some parameter tweaking (seems right)

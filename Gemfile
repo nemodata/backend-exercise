@@ -10,7 +10,7 @@ gem 'rails', '~> 7.0.0', '>= 7.0.0'
 # Use postgres as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
-gem 'puma', '~> 5.6.2'
+gem 'puma', '~> 6.0.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in staging
@@ -40,7 +40,6 @@ end
 group :development, :test do
   gem 'awesome_print'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'debase'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'jwt'
@@ -62,7 +61,6 @@ end
 gem 'actionpack', '>= 6.1.4.2'
 gem 'active_model_serializers'
 gem 'brakeman'
-gem 'nokogiri', '>= 1.13.4'
 gem 'pagy', '~> 3.10'
 gem 'rack-attack'
 gem 'rack-cors'

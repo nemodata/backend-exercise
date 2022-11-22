@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Rspec/NoExpectationExample
 def test_index(options = {})
   get("lists #{resource}") do
     tags resource.to_s
@@ -161,3 +162,5 @@ end
 def resource
   (instance_of?(Class) ? metadata : self.class.metadata)[:resource]
 end
+
+# rubocop:enable Rspec/NoExpectationExample

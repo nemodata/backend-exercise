@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-RSpec.describe Api::V1::ExamplesController, type: :controller do
+RSpec.describe Api::V1::ExamplesController do
   before do
     request.headers['Content-Type']  = 'application/json'
     request.headers['Authorization'] = send('Authorization')

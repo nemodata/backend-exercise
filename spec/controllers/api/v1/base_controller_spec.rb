@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Api::V1::BaseController, type: :controller do
+RSpec.describe Api::V1::BaseController do
   it 'raises error if permitted_params is not overridden' do
     params = double
 

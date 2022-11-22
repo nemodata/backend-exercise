@@ -8,7 +8,7 @@ class TestClass < ApplicationRecord
   end
 end
 
-RSpec.describe ApplicationRecord, type: :model do
+RSpec.describe ApplicationRecord do
   it 'initializes instance inherited from company' do
     expect { TestClass.new }.not_to raise_exception
   end

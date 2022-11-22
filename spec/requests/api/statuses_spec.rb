@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Api::Status', type: :request, resource: :example do
+RSpec.describe 'Api::Status', resource: :example do
   describe 'GET /api/status' do
     it 'returns a status check' do
       get '/api/status'

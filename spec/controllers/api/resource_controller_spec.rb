@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Api::ResourceController, type: :controller do
+RSpec.describe Api::ResourceController do
   before do
     Rails.application.routes.draw { namespace(:api, defaults: { format: :json }) { resources :resource } }
     request.headers['Content-Type']  = 'application/json'

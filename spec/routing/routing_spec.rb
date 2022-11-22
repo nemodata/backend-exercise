@@ -33,7 +33,7 @@ RSpec.shared_examples 'routing' do |resource, prefix|
   end
 end
 
-RSpec.describe 'routes', type: :routing do
+RSpec.describe 'routes' do
   describe 'API' do
     it 'routes status check' do
       expect(get: 'api/status')
