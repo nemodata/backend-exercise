@@ -47,7 +47,7 @@ class Rack::Attack
   #        100 requests in 0.38 days (~250 requests/day)
 
   (1..5).each do |level|
-    throttle("logins/ip/#{level}", limit: (20 * level), period: (8**level).seconds) do |req|
+    throttle("logins/ip/#{level}", limit: (level * 20), period: (8**level).seconds) do |req|
       req.ip if req.path == '/login' && req.post?
     end
   end
@@ -96,7 +96,7 @@ class Rack::Attack
   end
 end
 
-class Rack::Attack::Request < ::Rack::Request
+class Rack::Attack::Request < Rack::Request
   def localhost?
     ip == '127.0.0.1'
   end

@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.1'
+ruby '3.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7.0.0', '>= 7.0.0'
@@ -46,7 +46,7 @@ group :development, :test do
   gem 'open_api-schema_validator'
   gem 'rspec_junit_formatter'
   gem 'rspec-rails'
-  gem 'rubocop', '~> 1.5', require: false
+  gem 'rubocop', '~> 1.4', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rake', require: false
   gem 'rubocop-rspec', require: false
