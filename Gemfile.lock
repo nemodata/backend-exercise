@@ -175,7 +175,7 @@ GEM
       racc
     pg (1.5.3)
     public_suffix (5.0.3)
-    puma (6.0.2)
+    puma (6.3.1)
       nio4r (~> 2.0)
     racc (1.7.1)
     rack (2.2.7)
@@ -328,7 +328,7 @@ DEPENDENCIES
   open_api-schema_validator
   pagy (~> 3.10)
   pg
-  puma (~> 6.0.0)
+  puma (~> 6.3.1)
   rack-attack
   rack-cors
   rails (~> 7.0.0, >= 7.0.0)
