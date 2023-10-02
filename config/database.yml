@@ -50,9 +50,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: <%= ENV['HELLO_TEST_DB'] || 'interview_db' %>
+  database: <%= ENV['INTERVIEW_TEST_DB'] || 'interview_db' %>
   username: <%= ENV['POSTGRES_USER'] %>
   password: <%= ENV['POSTGRES_PASSWORD'] %>
+  host: <%= ENV['POSTGRES_HOST'] %>
 
 e2e:
   <<: *default
