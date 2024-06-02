@@ -29,7 +29,7 @@ RSpec.describe Api::ResourceController do
     it 'renders resource list' do
       get :index
 
-      expect(response.parsed_body).to eq(Resource::RECORDS[0..19])
+      expect(response.parsed_body).to eq(Resource::RECORDS)
     end
   end
 
@@ -115,11 +115,11 @@ end
 class Resource < ApplicationRecord
   RECORDS = (0..65).map { |i| { 'id' => i, 'name' => "name #{i}" } }
   RECORDS.define_singleton_method(:offset) do |offset|
-    records = RECORDS[offset..]
-    records.define_singleton_method(:limit) do |limit|
-      records[0...limit]
+    RECORDS[offset..].tap do |records|
+      records.define_singleton_method(:limit) do |limit|
+        limit.zero? ? records : records[...limit]
+      end
     end
-    records
   end
 
   class << self
