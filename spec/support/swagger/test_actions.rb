@@ -143,7 +143,7 @@ def run_example!(example)
 end
 
 def build_attributes(type, procc)
-  allowed_keys = self.class.metadata[:schema]["#{type}_attributes".to_sym].keys
+  allowed_keys = self.class.metadata[:schema][:"#{type}_attributes"].keys
   attributes   = attributes_for(resource, fleet_id: permitted_fleet_ids.first).slice(*allowed_keys)
   procc&.call(attributes, type, permitted_fleet_ids)
   attributes

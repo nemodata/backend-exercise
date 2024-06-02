@@ -59,7 +59,7 @@ end
 gem 'actionpack', '>= 6.1.4.2'
 gem 'active_model_serializers'
 gem 'brakeman'
-gem 'pagy', '~> 3.10'
+gem 'pagy'
 gem 'rack-attack'
 gem 'rack-cors'
 gem 'rswag'

@@ -6,24 +6,24 @@
 
 # Pagy Variables
 # See https://ddnexus.github.io/pagy/api/pagy#variables
-# All the Pagy::VARS are set for all the Pagy instances but can be overridden
+# All the Pagy::DEFAULT are set for all the Pagy instances but can be overridden
 # per instance by just passing them to Pagy.new or the #pagy controller method
 
 # Instance variables
 # See https://ddnexus.github.io/pagy/api/pagy#instance-variables
-# Pagy::VARS[:page]   = 1                                  # default
-# Pagy::VARS[:items]  = 20                                 # default
-# Pagy::VARS[:outset] = 0                                  # default
+# Pagy::DEFAULT[:page]   = 1                                  # default
+# Pagy::DEFAULT[:items]  = 20                                 # default
+# Pagy::DEFAULT[:outset] = 0                                  # default
 
 # Other Variables
 # See https://ddnexus.github.io/pagy/api/pagy#other-variables
-# Pagy::VARS[:size]       = [1,4,4,1]                       # default
-# Pagy::VARS[:page_param] = :page                           # default
-# Pagy::VARS[:params]     = {}                              # default
-# Pagy::VARS[:fragment]   = '#fragment'                     # example
-# Pagy::VARS[:link_extra] = 'data-remote="true"'            # example
-# Pagy::VARS[:i18n_key]   = 'pagy.item_name'                # default
-# Pagy::VARS[:cycle]      = true                            # example
+# Pagy::DEFAULT[:size]       = [1,4,4,1]                       # default
+# Pagy::DEFAULT[:page_param] = :page                           # default
+# Pagy::DEFAULT[:params]     = {}                              # default
+# Pagy::DEFAULT[:fragment]   = '#fragment'                     # example
+# Pagy::DEFAULT[:link_extra] = 'data-remote="true"'            # example
+# Pagy::DEFAULT[:i18n_key]   = 'pagy.item_name'                # default
+# Pagy::DEFAULT[:cycle]      = true                            # example
 
 # Extras
 # See https://ddnexus.github.io/pagy/extras
@@ -86,7 +86,7 @@
 
 # Multi size var used by the *_nav_js helpers
 # See https://ddnexus.github.io/pagy/extras/navs#steps
-# Pagy::VARS[:steps] = { 0 => [2,3,3,2], 540 => [3,5,5,3], 720 => [5,7,7,5] }   # example
+# Pagy::DEFAULT[:steps] = { 0 => [2,3,3,2], 540 => [3,5,5,3], 720 => [5,7,7,5] }   # example
 
 # Feature Extras
 
@@ -94,7 +94,7 @@
 # See http://ddnexus.github.io/pagy/extras/headers
 require 'pagy/extras/headers'
 # default
-# Pagy::VARS[:headers] = { page: 'Current-Page', items: 'Page-Items', count: 'Total-Count', pages: 'Total-Pages' }
+# Pagy::DEFAULT[:headers] = { page: 'Current-Page', items: 'Page-Items', count: 'Total-Count', pages: 'Total-Pages' }
 
 # Support extra: Extra support for features like: incremental, infinite, auto-scroll pagination
 # See https://ddnexus.github.io/pagy/extras/support
@@ -103,16 +103,16 @@ require 'pagy/extras/headers'
 # Items extra: Allow the client to request a custom number of items per page with an optional selector UI
 # See https://ddnexus.github.io/pagy/extras/items
 require 'pagy/extras/items'
-# Pagy::VARS[:items_param] = :items    # default
-Pagy::VARS[:items_param] = :itemsPerPage
-# Pagy::VARS[:max_items]   = 100       # default
+# Pagy::DEFAULT[:items_param] = :items    # default
+Pagy::DEFAULT[:items_param] = :itemsPerPage
+Pagy::DEFAULT[:max_items]   = 100_000
 # set to false if you want to make :enable_items_extra an opt-in variable
-# Pagy::VARS[:enable_items_extra] = false    # default true
+# Pagy::DEFAULT[:enable_items_extra] = false    # default true
 
 # Overflow extra: Allow for easy handling of overflowing pages
 # See https://ddnexus.github.io/pagy/extras/overflow
 # require 'pagy/extras/overflow'
-# Pagy::VARS[:overflow] = :empty_page    # default  (other options: :last_page and :exception)
+# Pagy::DEFAULT[:overflow] = :empty_page    # default  (other options: :last_page and :exception)
 
 # Metadata extra: Provides the pagination metadata to Javascript frameworks like Vue.js, react.js, etc.
 # See https://ddnexus.github.io/pagy/extras/metadata
@@ -120,14 +120,14 @@ Pagy::VARS[:items_param] = :itemsPerPage
 # require 'pagy/extras/shared'
 # require 'pagy/extras/metadata'
 # For performance reason, you should explicitly set ONLY the metadata you use in the frontend
-# Pagy::VARS[:metadata] = [:scaffold_url, :count, :page, :prev, :next, :last]    # example
+# Pagy::DEFAULT[:metadata] = [:scaffold_url, :count, :page, :prev, :next, :last]    # example
 
 # Trim extra: Remove the page=1 param from links
 # See https://ddnexus.github.io/pagy/extras/trim
 # require 'pagy/extras/trim'
 # after requiring it will trim by default
 # set to false if you want to make :enable_trim_extra an opt-in variable
-# Pagy::VARS[:enable_trim_extra] = false # default true
+# Pagy::DEFAULT[:enable_trim_extra] = false # default true
 
 # Rails
 
@@ -171,4 +171,4 @@ Pagy::VARS[:items_param] = :itemsPerPage
 # require 'pagy/extras/i18n'
 
 # Default i18n key
-# Pagy::VARS[:i18n_key] = 'pagy.item_name'   # default
+# Pagy::DEFAULT[:i18n_key] = 'pagy.item_name'   # default
